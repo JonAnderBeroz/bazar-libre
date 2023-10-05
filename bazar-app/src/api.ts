@@ -9,7 +9,7 @@ const api = {
       return fetch(`${url}?${params}`).then((res) => res.json());
     },
     getById: (id: number): Promise<Product> => {
-      return fetch(`https://bazar-api.jonberoz2000.workers.dev/items/${id}`).then((res) => {
+      return fetch(`${process.env.API_ENDPOINT}/items/${id}`).then((res) => {
         console.log(res);
         return res.json();
       });
