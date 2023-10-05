@@ -1,3 +1,29 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "warn",
+      {
+        "printWidth": 100,
+        "tab-width": 2,
+        "semi": true,
+        "singleQuote": false,
+        "bracketSpacing": false,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
