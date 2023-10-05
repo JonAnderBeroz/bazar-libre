@@ -31,7 +31,7 @@ items.get("/:id", (context) => {
 
 items.get("/", (context) => {
   const query = context.req.query("q");
-  console.log(query);
+  console.log("patata");
   if (!query) {
     throw new HTTPException(404, {message: "Query param no provisto"});
   }

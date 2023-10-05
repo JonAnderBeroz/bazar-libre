@@ -1,1 +1,0 @@
-# Prueba tecnica de bazar libres
