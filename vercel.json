@@ -1,4 +1,0 @@
-{
-  "buildCommand": "cd .\\bazar-app\\ | next build",
-  "framework": "nextjs"
-}
