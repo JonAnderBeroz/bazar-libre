@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className="grid w-screen h-screen">{children}</body>
+      <body className="grid w-full h-screen justify-items-center">{children}</body>
     </html>
   );
 }
