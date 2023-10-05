@@ -3,14 +3,14 @@ import {formatRating} from "@/functions";
 import ImageGallery from "./image-gallery";
 import SearchBar from "@/components/search-bar";
 
-export default function ProductPage({params: {id}}: {params: {id: number}}) {
-  const {title, brand, description, images, price, stock, rating} = api.products.getById(id);
+export default async function ProductPage({params: {id}}: {params: {id: number}}) {
+  const {title, brand, description, images, price, stock, rating} = await api.products.getById(id);
   return (
-    <section className="flex flex-col gap-5 max-w-6xl justify-self-center w-full p-4">
-      <header>
+    <section className="flex flex-col gap-5 max-w-6xl justify-self-center w-full p-4 items-center">
+      <header className="">
         <SearchBar />
       </header>
-      <article className="self-center flex flex-col gap-2 px-5 w-full">
+      <article className="flex flex-col gap-2 px-5 w-full">
         <ImageGallery images={images} />
         <h2 className="text-xl font-semibold text-center">{`${title} - ${brand}`}</h2>
         <div className="flex gap-3 justify-center items-center">

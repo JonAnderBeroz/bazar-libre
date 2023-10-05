@@ -1,10 +1,10 @@
 "use client";
 
-import {redirect} from "next/navigation";
-
+import {useRouter} from "next/navigation";
 import {FormEvent} from "react";
 
 export default function SearchBar() {
+  const router = useRouter();
   function handleFormSubmit(e: FormEvent) {
     e.preventDefault();
     const {value}: HTMLInputElement = e.target[0];
@@ -12,7 +12,7 @@ export default function SearchBar() {
       alert("Debes rellenar el campo!");
       return;
     }
-    redirect(`/items?search=${value}`);
+    router.push(`/items?search=${value}`);
   }
 
   return (

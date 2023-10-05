@@ -1,14 +1,16 @@
-"use client";
-
-import api from "@/api";
 import SearchBar from "@/components/search-bar";
 import {formatRating} from "@/functions";
 import {type Product} from "@/types";
 
 import Image from "next/image";
 import Link from "next/link";
+import api from "@/api";
 
-function Item({product: {id, title, description, price, rating, thumbnail}}: {product: Product}) {
+function Product({
+  product: {id, title, description, price, rating, thumbnail},
+}: {
+  product: Product;
+}) {
   return (
     <Link href={`/items/${id}`} className="flex flex-col gap-3 h-80">
       <Image
@@ -28,18 +30,22 @@ function Item({product: {id, title, description, price, rating, thumbnail}}: {pr
   );
 }
 
-export default function Items() {
-  const category = new URLSearchParams(location.search).get("search")!.toLocaleLowerCase();
-  const products = api.products.getByCategory(category);
+export default async function ProductsIndex({
+  searchParams,
+}: {
+  searchParams?: {[key: string]: string};
+}) {
+  const category = searchParams?.search!;
+  const products = await api.products.getByCategory(category);
   return (
-    <section className="flex flex-col gap-5 max-w-6xl justify-self-center w-full p-4">
-      <header className="self-center">
+    <section className="flex flex-col gap-5 max-w-6xl items-center p-4">
+      <header>
         <SearchBar />
       </header>
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-10 place-items-center">
+      <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <Item product={product} />
+            <Product product={product} />
           </li>
         ))}
       </ul>
