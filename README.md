@@ -6,7 +6,7 @@
     - [Tecnologias utilizadas](#tecnologias-utilizadas)
   - [Bazar-api](#bazar-api)
     - [Rutas](#rutas)
-    - [Tecnologias](#tecnologias)
+    - [Tecnologias utilizadas](#tecnologias-utilizadas-1)
   - [Instalación](#instalación)
 
 ## Descripción
@@ -33,7 +33,7 @@ Esta carpeta rege todo el codigo del back de la aplicación web.
 | /api/items?q=:query | Product[] |
 | /api/items/:id      | Product   |
 
-### Tecnologias
+### Tecnologias utilizadas
 
 - [Hono](https://hono.dev/)
 
