@@ -1,5 +1,14 @@
 # [Prueba tecnica de bazar fullstack](https://github.com/midudev/pruebas-tecnicas/tree/main/pruebas/02-bazar-universal)
 
+- [Prueba tecnica de bazar fullstack](#prueba-tecnica-de-bazar-fullstack)
+  - [Descripción](#descripción)
+  - [Bazar-app](#bazar-app)
+    - [Tecnologias utilizadas](#tecnologias-utilizadas)
+  - [Bazar-api](#bazar-api)
+    - [Rutas](#rutas)
+    - [Tecnologias](#tecnologias)
+  - [Instalación](#instalación)
+
 ## Descripción
 Esta repositorio contiene mi solucion a la prueba tecnica que consistia en la creación de un bazar con todo tipo de productos. En esto repositorio se recogen el tanto el front como el back de la aplicación web.
 
@@ -68,7 +77,7 @@ Esta carpeta rege todo el codigo del back de la aplicación web.
         ```
    2. PNPM
       ```
-      pnpm
+      pnpm install
       ```
 7. Crear archivo .env.local e introducir el siguiente valor:
 
